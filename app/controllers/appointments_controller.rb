@@ -1,4 +1,7 @@
 class AppointmentsController < ApplicationController
+
+  def index
+  end=
   def show
     @appointment = Appointment.find(params[:id])
   end
@@ -29,7 +32,7 @@ class AppointmentsController < ApplicationController
   end
 
   private
-  
+
   def appointment_params
     params.require(:appointment).permit(:date_time, :doctor_id, :patient_id)
   end
