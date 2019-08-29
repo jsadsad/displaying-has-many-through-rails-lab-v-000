@@ -27,4 +27,9 @@ class AppointmentsController < ApplicationController
     @appointment.destroy
     redirect_to appointment_path(@appointment)
   end
+
+  private
+  def appointment_params
+    params.require(:appointment).permit(:date_time, :doctor_id, :patient_id)
+  end
 end
