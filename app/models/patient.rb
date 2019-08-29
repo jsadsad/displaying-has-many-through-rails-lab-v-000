@@ -1,5 +1,5 @@
 class Patient < ApplicationRecord
-  belongs_to :doctor
+  has_many :doctors, through: :appointments
   has_many :appointments
 
   def appt_count
