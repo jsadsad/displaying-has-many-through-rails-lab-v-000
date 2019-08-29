@@ -32,5 +32,8 @@ class DoctorsController < ApplicationController
     redirect_to doctor_path
   end
 
-
+  private
+  def doctor_params
+    params.require(:doctor).permit(:name, :department)
+  end
 end
