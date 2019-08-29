@@ -25,7 +25,7 @@ class AppointmentsController < ApplicationController
   def destroy
     @appointment = Appointment.find(params[:id])
     @appointment.destroy
-    redirect_to appointment_path(@appointment)
+    redirect_to appointment_path
   end
 
   private
